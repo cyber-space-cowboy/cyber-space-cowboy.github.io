@@ -8,7 +8,7 @@ This project was done for my TN425 class which dealt with wireless signals.
 My group was tasked to investigate all generations of WiFi, data transfer rates, and security implementation. Sadly enough, we did not have 802.11 AX (WiFi 6) equipment on hand to use/test which is the newest offering to the WiFi family. In addition to only going up to 802.11 ac the security we were able to grant the wireless was only up to WPA2. The bands did not apply much towards security from the methods we were testing so we just tested the security within the AC band.
 
 In the lab we were able to create a Router-On-A-Stick network for testing purposes to recreate a similar setup you may see in the wild.
-We used several pieces of Cisco equipment to accomplish this: Cisco Router, Cisco Switch, and a Cisco 3504 Wireless Controller. The AP and Controller were not up to 802.11 AX yet, but could still support the 802.11 a/b/c/g/n/ac bands. The 802.11 n channel was unable to be tested in its own and was used in unison with other bands [see the slides we made]()
+We used several pieces of Cisco equipment to accomplish this: Cisco Router, Cisco Switch, and a Cisco 3504 Wireless Controller. The AP and Controller were not up to 802.11 AX yet, but could still support the 802.11 a/b/c/g/n/ac bands. The 802.11 n channel was unable to be tested in its own and was used in unison with other bands [see the slides and guide we made](https://drive.google.com/open?id=1sozDTa1xm9SjYfEsAZY7P4lSRtlAXzca).
 
 What are the different bands?
 A - Operates at frequencies between 5.725 GHz and 5.850 GHz, using Orthogonal Frequency-Division Multiplexing (OFDM)  modulation scheme, and supports speeds up to 54 Mbps
@@ -35,7 +35,7 @@ This picture shows the security configuration we made within the controller. We 
 
 ![_config.yml]({{ site.baseurl }}/images/WiFi/WEP_Sniff.png)
 
-We first booted up a terminal within the laptop running Parrot and launched the tool known as airodump-ng. Once the WLAN adapter is placed in monitor mode we are able to 802.11 traffic. Our test network was aptly names "Test 425 Network" as you can see in the encryption (ENC) column we are running WEP encryption . It is important to note when you are doing this kind of attack that the data needs to be clearly transfered. Otherwise it is going to be hard for you to obtain the key or deauth any device on the network in order for you to obtain the handshake.
+We first booted up a terminal within the laptop running Parrot and launched the tool known as airodump-ng. Once the WLAN adapter is placed in monitor mode we are able to 802.11 traffic. Our test network was aptly names "Test 425 Network" as you can see in the encryption (ENC) column we are running WEP encryption . It is important to note when you are doing this kind of attack that the data needs to be clearly transferred. Otherwise it is going to be hard for you to obtain the key or deauth any device on the network in order for you to obtain the handshake.
 
 ![_config.yml]({{ site.baseurl }}/images/WiFi/WEP_Sniff_2.png)
 
@@ -69,7 +69,7 @@ WPA:
 WPA2:
 ![_config.yml]({{ site.baseurl }}/images/WiFi/WPA2_Sniff.png)
 
-As you can see we have some data transferring, but we need a device to authenicate to this network in order to obtain those EAPOL packets. So while running the airodump tool with the refined query to only sniff the "Test 425 Network" we will deauth a device from the network. The good thing about this is that you can see what devices are putting out data and chose your victim.
+As you can see we have some data transferring, but we need a device to authenticate to this network in order to obtain those EAPOL packets. So while running the airodump tool with the refined query to only sniff the "Test 425 Network" we will deauth a device from the network. The good thing about this is that you can see what devices are putting out data and chose your victim.
 
 Here is me Deauthing a device on the network with aireplay-ng:
 ![_config.yml]({{ site.baseurl }}/images/WiFi/WPA_Deauth.png)
@@ -84,7 +84,7 @@ Once the EAPOL packets are found you can now save the selected packets as a bran
 
 ![_config.yml]({{ site.baseurl }}/images/WiFi/WPA_Cracking.png)
 
-I found wordlist that was on github that held a million different passwords and used it when cracking the obtained EAPOL packets. It ran through the password list and was not cracked. This comes down to possibilities and entropy when coming up with a wordlist that holds all possible combinations, in this case only alphabetic symbols.
+I found wordlist that was on GitHub that held a million different passwords and used it when cracking the obtained EAPOL packets. It ran through the password list and was not cracked. This comes down to possibilities and entropy when coming up with a wordlist that holds all possible combinations, in this case only alphabetic symbols.
 Here is a very good XKCD comic to describe the reasoning:
 
 ![_config.yml]({{ site.baseurl }}/images/WiFi/XKCD.jpg)
