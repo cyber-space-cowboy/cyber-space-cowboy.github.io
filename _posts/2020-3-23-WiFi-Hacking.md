@@ -12,3 +12,5 @@ We used several pieces of Cisco equipment to accomplish this: Cisco Router, Cisc
 To measure the data transfer rates of the different bands we had two laptops running ftp services transferring 1MB, 10MB, and 50MB files. While these transfers of data were taking place, a third laptop outside of the network running ParrotOS with a ALFA AWUS036ACH USB Wireless Adapter. This card in particular is able to do monitor mode and packet injection, which is incredibly important during WiFi hacking. The majority of tools used came from the Airegeddon sweet which comes pre-installed with ParrotOS and Kali (Two offensive security distros). There are several pre-installed WiFi tools to use besides the Airegeddon sweet, but we used those specifically to show what exactly is taking place. To show the more automated "Script-Kiddie" tools we used WiFite which is completely automated through simple command-line prompts.
 
 The first test was with a network running WEP:
+
+![_config.yml]({{ site.baseurl }}/images/WiFi/WEP Key.png)
