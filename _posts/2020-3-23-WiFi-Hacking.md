@@ -1,3 +1,8 @@
+---
+layout: post
+title: WiFi Hacking
+---
+
 This project was done for my TN425 class which dealt with wireless signals.
 My group was tasked to investigate all generations of WiFi, data transfer rates, and security implementation. Sadly enough, we did not have 802.11 AX (WiFi 6) equipment on hand to use/test which is the newest offering to the WiFi family. In addition to only going up to 802.11 ac the security we were able to grant the wireless was only up to WPA2. The bands did not apply much towards security from the methods we were testing so we just tested the security within the AC band.
 
