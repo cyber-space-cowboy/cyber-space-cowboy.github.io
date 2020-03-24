@@ -13,4 +13,4 @@ To measure the data transfer rates of the different bands we had two laptops run
 
 The first test was with a network running WEP:
 
-![_config.yml]({{ site.baseurl }}/images/WiFi/WEP Key.png)
+![_config.yml]({{ site.baseurl }}/images/WiFi/WEP_Key.png)
