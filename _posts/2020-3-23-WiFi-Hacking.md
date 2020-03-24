@@ -53,7 +53,7 @@ The attack that was launched against the network was a replay/fakeauth attack. A
 
 Now covering WPA and WPA2:
 
-![_config.yml]({{ site.baseurl }}/images/WiFi/WPA_and_WPA_2_Key.PNG)
+![_config.yml]({{ site.baseurl }}/images/WiFi/WPA_and_WPA_2_Key.png)
 
 This is what the controller had to offer within security. When testing we decided to go with the most common encryption standards to attack. WPA/WPA2 policies were enabled to use AES with a preshared key (PSK). The key in this case was "hellothisissecure", which was to show why key length matters. When a device tries to authenticate to a network it is prompted to present the PSK in order to get properly authenticated and obtain an IP. While authenticating the controller (in this case) and device exchange four EAPOL packets. The picture below displays the key exchange between a device and AP:
 
