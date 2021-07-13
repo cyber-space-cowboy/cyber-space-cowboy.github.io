@@ -1,10 +1,7 @@
-# --- 
-
-# layout: post 
-
-# title: Honeypots and Hand Grenades: Part 1 
-
-# ---
+---
+layout: post
+title: Honeypots and Hand Grenades: Part 1
+---
 
 ### What is a Honeypot?
 
@@ -20,7 +17,7 @@ Honeypots, honey systems, honey services, and honey tokens are NOT illegal to us
 
 ### Honey Systems
 
-Honey systems- Emulate or are actual operating systems. With in the Honey systems you can categorize these further into High Interaction and Low Interaction honeypots. High Interaction honeypots is where the danger resides due to the honeypot being the full OS. You are risking the instance being compromised and the attacker pivoting from the honeypot further into the network. However you are able to obtain more information of the attackers tactics, techniques, and procedures (TTPs). Low Interaction honeypots are used for detection and these usually apply to Honey services and Honey tokens to where they emulate a specific service or system. Since this isn't designed to be a whole OS there is less chance of compromise. 
+Honey systems- Emulate or are actual operating systems. With in the Honey systems you can categorize these further into High Interaction and Low Interaction honeypots. High Interaction honeypots is where the danger resides due to the honeypot being the full OS. You are risking the instance being compromised and the attacker pivoting from the honeypot further into the network. However you are able to obtain more information of the attackers tactics, techniques, and procedures (TTPs). Low Interaction honeypots are used for detection and these usually apply to Honey services and Honey tokens to where they emulate a specific service or system. Since this isn't designed to be a whole OS there is less chance of compromise.
 
 Example: a Windows server that is exposed but is not directly running any services that are used for a purpose (High Interaction). [Tpotce](https://github.com/telekom-security/tpotce): Prebuilt, insanely cool with a lot of options and ELK stack with numerous tools (Low - Mid Interaction).
 
@@ -114,4 +111,4 @@ Further down you can view more info
 
 ### In Closing
 
-A good honeypot may include all three of these variants: honey system, honey service, and honey token. However, all three can be independently used on their own or with some combination. A great honeypot will any of those three in combination with good cyber deception techniques to entice attackers. In my next post I will go through my steps on creating a honeypot and cyber deception tactics. 
+A good honeypot may include all three of these variants: honey system, honey service, and honey token. However, all three can be independently used on their own or with some combination. A great honeypot will any of those three in combination with good cyber deception techniques to entice attackers. In my next post I will go through my steps on creating a honeypot and cyber deception tactics.
