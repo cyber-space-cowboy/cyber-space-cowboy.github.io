@@ -17,9 +17,9 @@ Honeypots, honey systems, honey services, and honey tokens are NOT illegal to us
 
 ### Honey Systems
 
-Honey systems- Emulate or are actual operating systems. With in the Honey systems you can categorize these further into High Interaction and Low Interaction honeypots. High Interaction honeypots is where the danger resides due to the honeypot being the full OS. You are risking the instance being compromised and the attacker pivoting from the honeypot further into the network. However you are able to obtain more information of the attackers tactics, techniques, and procedures (TTPs). Low Interaction honeypots are used for detection and these usually apply to Honey services and Honey tokens to where they emulate a specific service or system. Since this isn't designed to be a whole OS there is less chance of compromise.
+Honey systems- Emulate or are actual operating systems. Within the Honey systems, you can categorize these further into High Interaction and Low Interaction honeypots. High Interaction honeypots are where the danger resides due to the honeypot being the full OS. You are risking the instance being compromised and the attacker pivoting from the honeypot further into the network. However, you are able to obtain more information on the attackers’ tactics, techniques, and procedures (TTPs). Low Interaction honeypots are used for detection and these usually apply to Honey services and Honey tokens to where they emulate a specific service or system. Since this isn't designed to be a whole OS there is less chance of compromise.
 
-Example: a Windows server that is exposed but is not directly running any services that are used for a purpose (High Interaction). [Tpotce](https://github.com/telekom-security/tpotce): Prebuilt, insanely cool with a lot of options and ELK stack with numerous tools (Low - Mid Interaction).
+Example: a Windows server that is exposed but is not directly running any services that are used for a purpose (High Interaction). [Tpotce](https://github.com/telekom-security/tpotce): Prebuilt, insanely cool with a lot of options, and ELK stack with numerous tools (Low - Mid Interaction).
 
 tpotce:
 
@@ -61,13 +61,13 @@ All other attempts that are not those provided above do not establish an SSH ses
 
 ![_config.yml]({{ site.baseurl }}/images/honeypots/cowrie_logs.png)
 
-Within the logs you are able to see the IP of the attacker, username/password attempted, successful or not, and the commands ran. Cowrie also does emulate other systems to make it appear that the whole network is accessible to the attacker as well as an internet connection. I pinged Googles IP and as well tried to install nmap on the system, but you were not able to execute the command.
+Within the logs you are able to see the IP of the attacker, username/password attempted, successful or not, and the commands ran. Cowrie also does emulate other systems to make it appear that the whole network is accessible to the attacker as well as an internet connection. I pinged Googles IP and as well tried to install Nmap on the system, but you were not able to execute the command.
 
 ![_config.yml]({{ site.baseurl }}/images/honeypots/cowrie_internet.png)
 
 ![_config.yml]({{ site.baseurl }}/images/honeypots/install_nmap.png)
 
-When I attempted to try to then pivot to another Linux instance in my home lab (goat) from cowrie it kinda broke. The username reverted to root and the host was local host. It also displayed incorrect hardware when trying to find out what I was in.
+When I attempted to try to then pivot to another Linux instance in my home lab (goat) from cowrie it kinda broke. The username reverted to root and the host was localhost. It also displayed incorrect hardware when trying to find out what I was in.
 
 ![_config.yml]({{ site.baseurl }}/images/honeypots/cowrie_emulation.png)
 
@@ -83,13 +83,13 @@ You can also explore the file system and also take a look at fake users
 
 ### Honey Tokens
 
-Honey Tokens- emulates legitimate data. This can be an email, word doc, excel doc, pdf, custom exe or bin, and all the way to if the website you imbued a token with to detect if it is cloned in a phishing attempt. Honey tokens are by far the safest option when it comes to these three. Though it is probably the last way to detect an attacker within your network. However if you are wanting to track insider threats and basic DLP this is a fantastic tool.
+Honey Tokens- emulates legitimate data. This can be an email, word doc, excel doc, pdf, custom exe or bin, and all the way to if the website you imbued a token with to detect if it is cloned in a phishing attempt. Honey tokens are by far the safest option when it comes to these three. Though it is probably the last way to detect an attacker within your network. However, if you are wanting to track insider threats and basic DLP this is a fantastic tool.
 
 You can make your own Honey token yourself, but I recommend utilizing [CanaryTokens](https://www.canarytokens.org/generate) by Thinkist. CanaryTokens is incredibly easy to use and everything is managed by Thinkist.
 
 ![_config.yml]({{ site.baseurl }}/images/honeypots/canary_options.png)
 
-In this case I chose to use a URL token and within this option you can provide a email or webhook URL to receive the alert with the reminder you wrote
+In this case, I chose to use a URL token and within this option, you can provide an email or webhook URL to receive the alert with the reminder you wrote
 
 ![_config.yml]({{ site.baseurl }}/images/honeypots/web_token.png)
 
@@ -101,7 +101,7 @@ I clicked on the canary link and received an email shortly after. The informatio
 
 ![_config.yml]({{ site.baseurl }}/images/honeypots/email.png)
 
-Once in the management portal you can view the event in much more detail. The incident map portion didn't render properly, but when it was first loading it did come through and was accurate. It displays Country, City, Region, Organization, and if the IP was a Tor node.
+Once in the management portal, you can view the event in much more detail. The incident map portion didn't render properly, but when it was first loading it did come through and was accurate. It displays Country, City, Region, Organization, and if the IP was a Tor node.
 
 ![_config.yml]({{ site.baseurl }}/images/honeypots/token_info.png)
 
@@ -111,4 +111,4 @@ Further down you can view more info
 
 ### In Closing
 
-A good honeypot may include all three of these variants: honey system, honey service, and honey token. However, all three can be independently used on their own or with some combination. A great honeypot will any of those three in combination with good cyber deception techniques to entice attackers. In my next post I will go through my steps on creating a honeypot and cyber deception tactics.
+A good honeypot may include all three of these variants: honey system, honey service, and honey token. However, all three can be independently used on their own or with some combination. A great honeypot will any of those three in combination with good cyber deception techniques to entice attackers. In my next post, I will go through my steps on creating a honeypot and cyber deception tactics.
