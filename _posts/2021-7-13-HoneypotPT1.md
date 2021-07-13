@@ -22,13 +22,13 @@ Example: a Windows server that is exposed but is not directly running any servic
 
 tpotce:
 
-![_config.yml]({{ site.baseurl }}/images/honeypots/tpot.png)
+![_config.yml]({{ site.baseurl }}/images/honeypots/tpot.jpg)
 
 This is a honey system with so many honey service options from [cowrie](https://github.com/cowrie/cowrie), [conpot](http://conpot.org/), [dionaea](https://github.com/DinoTools/dionaea), [mailhoney](https://github.com/awhitehatter/mailoney), [rdpy](https://github.com/citronneur/rdpy), and so many more operating all within Docker containers. Within the installation you can choose the types of services you would like to deploy and they even have industry-specific configs like Industrial and Medical.
 
 I happened to use the Standard configuration when I set mine up within an Azure. Within a week I had over a million attacks on multiple services, the biggest attack was within the [dionaea](https://github.com/DinoTools/dionaea) honey service which emulates multiple protocols.
 
-![_config.yml]({{ site.baseurl }}/images/honeypots/tpot_Result.png)
+![_config.yml]({{ site.baseurl }}/images/honeypots/tpot_Result.jpg)
 
 The ELK stack is incredibly nice to utilize as a SIEM, examining the logs within the stack is very easy and intuitive. Tpotce also runs an instance of [Cyberchef](https://gchq.github.io/CyberChef/) which is one of my favorite Cybersecurity tools, this makes decoding and data analysis so easy. After decoding and analyzing data you can then take it to the best OSINT tool out there, [Spiderfoot](https://github.com/smicallef/spiderfoot) for automated OSINT investigation.
 
