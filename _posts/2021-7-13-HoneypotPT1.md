@@ -60,7 +60,7 @@ All other attempts that are not those provided above do not establish an SSH ses
 
 ![_config.yml]({{ site.baseurl }}/images/honeypots/cowrie_logs.png)
 
-Within the logs you are able to see the IP of the attacker, username/password attempted, successful or not, and the commands ran. Cowrie also does emulate other systems to make it appear that the whole network is accessible to the attacker as well as an internet connection. I pinged Googles IP and as well tried to install Nmap on the system, but you were not able to execute the command.
+Within the logs you are able to see the IP of the attacker, username/password attempted, successful or not, and the commands ran. These logs can then be ported into multiple SIEMs like Splunk, ELK stack, and any other log viewing tools. Cowrie also does emulate other systems to make it appear that the whole network is accessible to the attacker as well as an internet connection. I pinged Googles IP and as well tried to install Nmap on the system, but you were not able to execute the command.
 
 ![_config.yml]({{ site.baseurl }}/images/honeypots/cowrie_internet.png)
 
