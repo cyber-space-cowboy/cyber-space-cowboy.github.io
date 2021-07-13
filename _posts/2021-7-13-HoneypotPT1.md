@@ -58,7 +58,7 @@ All other attempts that are not those provided above do not establish an SSH ses
 /var/log/cowrie - if you do not follow the recommendations within the docs
 ```
 
-![_config.yml]({{ site.baseurl }}/images/honeypots/cowrie_logs.png)
+![_config.yml]({{ site.baseurl }}/images/honeypots/cowrie_logs.jpg)
 
 Within the logs you are able to see the IP of the attacker, username/password attempted, successful or not, and the commands ran. Cowrie also does emulate other systems to make it appear that the whole network is accessible to the attacker as well as an internet connection. I pinged Googles IP and as well tried to install Nmap on the system, but you were not able to execute the command.
 
@@ -78,7 +78,7 @@ You can also explore the file system and also take a look at fake users
 
 ![_config.yml]({{ site.baseurl }}/images/honeypots/cowrie_explore1.png)
 
-![_config.yml]({{ site.baseurl }}/images/honeypots/cowrie_passwdcontents.png)
+![_config.yml]({{ site.baseurl }}/images/honeypots/cowrie_passwdcontents.jpg)
 
 ### Honey Tokens
 
