@@ -1,8 +1,7 @@
 ---
 layout: post
-title: Honeypots and Hand Grenades: Part 1
+title: Honeypots and Hand Grenades
 ---
-
 ### What is a Honeypot?
 
 Summarizing multiple definitions a "honeypot" is a system designed to be attacked. However, you can refine that definition into three main things that make up a "honeypot". In this blog, I will highlight the main three types of "honeypots". But first, we need to address one of the opposing arguments for the use of "honeypots".
